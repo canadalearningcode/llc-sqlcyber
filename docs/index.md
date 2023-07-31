@@ -34,14 +34,29 @@ Finished project / demo | English | CodeSandbox: [bit.ly/llc-jsweb-demo](https:/
 
 ### Description
 
-In this workshop, learners will get started with the basics of using JavaScript in the context of the web. Learners will set up a development environment as well as be introduced to and apply basic JavaScript syntax and concepts through a series of exercises. They will then be guided in their exploration of a web page's the document object model (DOM) and how to use the methods of the `document` object to select and modify elements on a web page. 
+With digital platforms and services being an increasingly inescapable part of our day-to-day lives, have you ever stopped to ask yourself, _"Is my personal data safe? Is my sensitive data being handled with care? Is my privacy being protected?"_ **Cybersecurity** is the practice of establishing and maintaining confidentiality, integrity, and availability of information, and it is the job of cybersecurity professionals to protect networks, devices, people, and data from unauthorized access or criminal exploitation.
+
+Cybersecurity professionals apply their knowledge and skills alongside a wide variety of tools and best practices to establish preventive security measures or, in the event of an attack or attempted breach, understand the impact of such an event and do their best to mitigate any damage caused.
+
+#### Why learn SQL?
+
+One of the most useful tools in their toolbelt is usage log data recorded by their systems and stored in databases, however having large amounts of data at their disposal creates a new challenge: how can this data be made useful?
+
+**Structured query language (or SQL)** is one of the most commonly-used computer languages for working with data and communicating with databases. SQL is a powerful language that allows us to extract useful insights from large quantities of data stored in databases. Cybersecurity professionals need to be able to efficiently sift through large amounts of data to be able to find irregularities that may indicate that their systems have been—or are being—targeted for an attack and SQL is a handy tool to accomplish that.
+
+#### The bottom line:
+
+Whether you've heard of databases or are brand new to them, this experience is designed for you. In this experience, you will learn the basics of SQL through a cybersecurity lens. Through hands-on exercises that will have you writing and executing SQL queries, you will learn to retrieve, filter, and sort data stored in a database to be able to address common cybersecurity problems and questions that cybersecurity professionals deal with on a regular basis.
 
 ### Learning objectives
 
 By the end of this experience, learners will be able to:
-1. __Work with JavaScript objects__, including using dot notation and applying built-in objects and methods in common use cases.
-2. __Use selectors__ to find specific elements in a web page's document object model.
-3. __Modify the content and visual presentation of a webpage__ through modifying elements with the document object model.
+1. Describe, in general terms, the concepts of **data** and **databases**.
+2. Describe, in general terms, the concept of **cybersecurity** and the role that **cybersecurity professionals** play in protecting access to networks and information.
+3. Use **Structured Query Language (SQL)** to:
+   * Retrieve data from a database
+   * Filter retrieved data using conditions and keywords
+   * Group data into categories and caluclate simple statistics for data or a dataset
 
 ### Prerequisities
 None
