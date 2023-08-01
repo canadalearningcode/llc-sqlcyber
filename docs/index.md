@@ -152,7 +152,7 @@ You will need to have an understanding of the following concepts to deliver this
 
 #### Database
 * A structured collection of data which can be queried.
-* [SQLite](#sqlite), the database technology used in this experience, is a kind of database known as a [relational database](#relational-database).
+* [SQLite](#sqlite), the database technology used in this experience, is a kind of database known as a [relational database](#relational-database-sql).
 
 #### Development environment
 * _See [integrated development environment (IDE)](#integrated-development-environment-ide)._
