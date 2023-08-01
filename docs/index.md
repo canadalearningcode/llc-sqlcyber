@@ -19,7 +19,9 @@ Slides | English | Google Slides: [Online or in-person](https://bit.ly/llc-sqlcy
 Dataset | Multi | SQLite database file (clccyber.db): [https://bit.ly/llc-sqlcyber-db](https://bit.ly/llc-sqlcyber-db)
 
 ## Versioning
+
 ### 1.0.0-a.1 (July 2023)
+
 * Initial release
 
 
@@ -162,6 +164,11 @@ You will need to have an understanding of the following concepts to deliver this
 * A word that carries a specific meaning in the context of an SQL query.
 * Keywords are *reserved words*, which means that these specific words can only ever be used for a predetermined purpose, and cannot be freely used or reassigned.
 
+#### Non-relational database (SQL)
+* Sometimes called NoSQL (for "Not only SQL"), this kind of database structure is often used to store less structured data (e.g., documents that can have different parts or sections), relationships between data (called a graph), or short-lived, temporary data (e.g., a list of user logins in the past 24 hrs)
+* Non-relational databases trade the structure and consistency that is part of relational databases for flexibility and speed.
+* This type of database structured is in contrast to [relational databases](#relational-database-sql)
+
 #### Operator (SQL)
 * Special symbols or [reserved words](#keyword-sql) that can be used to compare, calculate, and manipulate data.
 * Common **comparison operators** (usually found in a query's `WHERE` clause and which usually return a [boolean value](#boolean-value)) include: `=`, `>`, `=>`, `<`, `=<`, `NOT`, `AND`, `IN`, `BETWEEN`, `LIKE`.
@@ -169,19 +176,26 @@ You will need to have an understanding of the following concepts to deliver this
 #### Query (SQL)
 * A question for a database, made up of one or more [clauses](#clause).
 
+#### Relational database (SQL)
+* A type of database that stores related data together in tables, called relations (e.g., a `PERSON` table). Technologies built on these, such as [SQLite](#sqlite), are often called relational database management systems or RDBMSes.
+* Table **columns** describe attributes of the data (e.g., the `first_name` and `last_name` of a person).
+* Table **rows** represent a data object (e.g., an individual person).
+* Rows are uniquely identified by an ID (similar to how people can be identified by social insurance number or `SIN`) called primary keys.
+* This type of database structure is in contrast to [non-relational databases](#non-relational-database-sql)
+
 #### SQL
 * Structured query lanaguage.
 * A computer language used to access and manipulate data contained in a database.
 
 #### SQL Online IDE
+* A web-based [integrated development environment (IDE)](#integrated-development-environment-ide) used to work with different kinds of database technologies without needing to install an application.
 * URL: [https://sqliteonline.com](https://sqliteonline.com)
-* A web-based [integrated development environment (IDE)](#integrated-development-environment-ide) built around an industry standard tool, Microsoft Visual Studio Code (VSCode).
 
 #### SQLite
 * A small, self-contained, SQL-based database management system.
 
 #### Syntax
-* The rules and structure of a language (including programming languages) that allow it to be consistently understood and executed
+* The rules and structure of a language (including programming languages) that allow it to be consistently understood and executed.
 
 ### Modifications and Extensions
 
