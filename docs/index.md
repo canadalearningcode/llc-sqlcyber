@@ -16,13 +16,7 @@ Type | Language | Link
 --- | --- | ---
 Instructor notes 👈 _YOU ARE HERE_ | English | [GitHub Pages](https://canadalearningcode.github.io/llc-sqlcyber/)
 Slides | English | Google Slides: [Online or in-person](https://bit.ly/llc-sqlcyber)
-Dataset | Multi | SQLite database file: [clccyber.db](https://bit.ly/llc-sqlcyber-db)
-
-<!--
-Learner references  | English | Github Wiki: [bit.ly/llc-jsweb-refs](https://bit.ly/llc-jsweb-refs)
-Starting project / development environment | English | CodeSandbox: [bit.ly/llc-jsweb-ide](https://bit.ly/llc-jsweb-ide)
-Finished project / demo | English | CodeSandbox: [bit.ly/llc-jsweb-demo](https://bit.ly/llc-jsweb-demo)
--->
+Dataset | Multi | SQLite database file (clccyber.db): [https://bit.ly/llc-sqlcyber-db](https://bit.ly/llc-sqlcyber-db)
 
 ## Versioning
 ### 1.0.0-a.1 (July 2023)
@@ -145,39 +139,52 @@ You will need to have an understanding of the following concepts to deliver this
 #### Boolean value
 * A value that is either `true` or `false`.
 * Boolean values are often the result of a comparison [operator](#operator-sql) and can be used to filter data based on whether a specified condition is `true` or `false`.
+
 #### Clause (SQL)
 * A part of a query built around a particular SQL keyword (e.g., `SELECT`, `WHERE`, `ORDER BY`).
-* Clauses are used to describe what data should be returned by a database. 
+* Clauses are used to describe what data should be returned by a database.
+
 #### Data
 * Pieces of information usually formatted in a specific way.
 * Data can have many forms, including numbers, pictures, words and audio.
+
 #### Database
 * A structured collection of data which can be queried.
 * [SQLite](#sqlite), the database technology used in this experience, is a kind of database known as a [relational database](#relational-database).
+
 #### Development environment
 * _See [integrated development environment (IDE)](#integrated-development-environment-ide)._
+
 #### Integrated development environment (IDE)
 * An application that is used to write code. It often has features that make writing code easier, such as language-specific syntax highlighting. It also often has tools to facilitate development-related tasks such as version control.
+
 #### Keyword (SQL)
 * A word that carries a specific meaning in the context of an SQL query.
 * Keywords are *reserved words*, which means that these specific words can only ever be used for a predetermined purpose, and cannot be freely used or reassigned.
+
 #### Operator (SQL)
 * Special symbols or [reserved words](#keyword-sql) that can be used to compare, calculate, and manipulate data.
 * Common **comparison operators** (usually found in a query's `WHERE` clause and which usually return a [boolean value](#boolean-value)) include: `=`, `>`, `=>`, `<`, `=<`, `NOT`, `AND`, `IN`, `BETWEEN`, `LIKE`.
+
 #### Query (SQL)
 * A question for a database, made up of one or more [clauses](#clause).
+
 #### SQL
 * Structured query lanaguage.
 * A computer language used to access and manipulate data contained in a database.
+
 #### SQL Online IDE
 * URL: [https://sqliteonline.com](https://sqliteonline.com)
 * A web-based [integrated development environment (IDE)](#integrated-development-environment-ide) built around an industry standard tool, Microsoft Visual Studio Code (VSCode).
+
 #### SQLite
 * A small, self-contained, SQL-based database management system.
+
 #### Syntax
 * The rules and structure of a language (including programming languages) that allow it to be consistently understood and executed
 
 ### Modifications and Extensions
+
 #### Modifications
 * The exercises can also be run as a large group (a mix of `we` & `you`), if breakout rooms aren't an option.
 
