@@ -16,7 +16,8 @@ Type | Language | Link
 --- | --- | ---
 Instructor notes 👈 _YOU ARE HERE_ | English | [GitHub Pages](https://canadalearningcode.github.io/llc-sqlcyber/)
 Slides | English | Google Slides: [Online or in-person](https://bit.ly/llc-sqlcyber)
-Dataset | Multi | CLC Cyber
+Dataset | Multi | SQLite database file: [clccyber.db](https://bit.ly/llc-sqlcyber-db)
+
 <!--
 Learner references  | English | Github Wiki: [bit.ly/llc-jsweb-refs](https://bit.ly/llc-jsweb-refs)
 Starting project / development environment | English | CodeSandbox: [bit.ly/llc-jsweb-ide](https://bit.ly/llc-jsweb-ide)
@@ -38,15 +39,17 @@ With digital platforms and services being an increasingly inescapable part of ou
 
 Cybersecurity professionals apply their knowledge and skills alongside a wide variety of tools and best practices to establish preventive security measures or, in the event of an attack or attempted breach, understand the impact of such an event and do their best to mitigate any damage caused.
 
-#### Why learn SQL?
+#### **Why learn SQL?**
 
 One of the most useful tools in their toolbelt is usage log data recorded by their systems and stored in databases, however having large amounts of data at their disposal creates a new challenge: how can this data be made useful?
 
 **Structured query language (or SQL)** is one of the most commonly-used computer languages for working with data and communicating with databases. SQL is a powerful language that allows us to extract useful insights from large quantities of data stored in databases. Cybersecurity professionals need to be able to efficiently sift through large amounts of data to be able to find irregularities that may indicate that their systems have been—or are being—targeted for an attack and SQL is a handy tool to accomplish that.
 
-#### The bottom line:
+#### **The bottom line:**
 
 Whether you've heard of databases or are brand new to them, this experience is designed for you. In this experience, you will learn the basics of SQL through a cybersecurity lens. Through hands-on exercises that will have you writing and executing SQL queries, you will learn to retrieve, filter, and sort data stored in a database to be able to address common cybersecurity problems and questions that cybersecurity professionals deal with on a regular basis.
+
+---
 
 ### Learning objectives
 
@@ -70,9 +73,24 @@ None
 
 Element | Slides | Length
 --- | --- | ---
-Introduction | 1-14 |
-Today's tool: CodeSandbox.io | 15-19 |
-JavaScript _and_ the Web | 20-23 |
+Preamble | 1-12 |
+Data | 13-18 |
+Cybersecurity: Preparing for a storm | 19-26 |
+Databases | 27-30 |
+Today's tool | 32-28 |
+Exercise 0: `SELECT` | 45 |
+Exercise 1: `SELECT` & multiple columns | 53 |
+Exercise 2A: `WHERE` | 58 | 
+Exercise 2B: `WHERE` | 61 |
+Exercise 2C: `BETWEEN`, `NOT`, and `IN` | 64 |
+Exercise 2D: SQL functions | 68 |
+Exercise 3A: Dates and `LIKE` | 70-71 |
+Exercise 3B: Scavenger hunt | 72 |
+Exercise 4A: `ORDER BY` | 74 |
+Exercise 4B: `ORDER BY` | 75 |
+Exercise 4C: _"Hope it's a good one!"_ | 76-77 |
+Exercise 5: `GROUP BY` | 84 |
+Related tables and `JOIN` | 85-92 |
 
 ## Prep Work
 Before the workshop...
@@ -89,77 +107,80 @@ Before the workshop...
 
 ### Technical preparation
 You will need to have an understanding of the following concepts to deliver this workshop:
-* [ ] Basic JavaScript syntax (common keywords and symbols; structure) 
-* [ ] Writing to the web browser console with `console.log()`.
-* [ ] Using dot notation to access an object's properties.
-* [ ] Using dot notation to invoke an object's methods.
-* [ ] Invoking functions that require arguments. 
+* [ ] General understanding of data, databses and cybersecurity.
+* [ ] Basic SQL syntax (common keywords and symbols; structure) .
+* [ ] SQL wildcards: `*`, `%`, `_`
+* SQL keywords used for read operations, such as:
+  * [ ] `SELECT`
+  * [ ] `FROM`
+  * [ ] `WHERE`
+  * [ ] `ORDER BY`
+  * [ ] `GROUP BY`
+  * [ ] `JOIN`
+* The behaviour and application of common **SQL comparison operators**, such as:
+  * [ ] `=`, `>`, `=>`, `<`, `=<`
+  * [ ] `NOT`
+  * [ ] `AND`
+  * [ ] `IN`
+  * [ ] `BETWEEN`
+  * [ ] `LIKE`
+* The behaviour and application of common **SQL functions**, such as:
+  * [ ] `COUNT()`
+  * [ ] `MIN()`
+  * [ ] `MAX()`
+  * [ ] `AVG()`
+  * [ ] `SUM`
+  * [ ] `SUBSTRING()`
 
 ## Delivery Notes
 
-<!--
 * __Minimize the time spent on slides before coding begins.__ This workshop is fairly dense, and while these early slides provide important context (which is why they are included), trying to maximize learner interaction at this early stage is less valuable than getting into, and through, the content and exercises.
-* If this is being delivered online and mentors & breakout rooms are being used, consider still starting each exercise as the whole group, to get the ball rolling.
-* The timings provided for the exercises are guidelines. Generally speaking, the exercises aren't particularly long and shouldn't actually take as long as described. Be strict on calling everyone back once the time limit has been reached and consider having shorter breakout times to account for time used if taking up the solutions to the exercises. 
--->
+* If this is being delivered online and mentors & breakout rooms are being used, consider still starting each exercise as the whole group, to get the ball rolling. Encourage mentors or co-facilitators to actively move learners through the exercises when in breakout rooms.
+* Solutions for each exercise are included either in the slides or in the slide notes.
 
 ## Supplemental Resources
 
 ### Key Terms and Concepts
 
-#### Application programming interface (API)
-* A structured way for two or more applications to communicate with each other and share or request data.
-* The document object model that we use to access many of the features and functionality of a web page or site is one of many so-called [Web APIs (External link: Mozilla Developer Network)](https://developer.mozilla.org/en-US/docs/Web/API).
-#### Cascading Style Sheets (CSS)
-* A rules-based computer language that can be used to apply different styles to specified sets of HTML elements, based on a [selector](#selector-css) pattern, to change the visual appearance or layout of a web page.
-#### CodeSandbox.io
-* A web-based [integrated development environment (IDE)](#integrated-development-environment-ide) built around an industry standard tool, Microsoft Visual Studio Code (VSCode).
-#### `console` object
-* An object that is provided by a web browser as a way for a web page to communicate with a browser's built-in console.
-* Messages are sent to a browser's console using various methods that are part of the Console [API](#application-programming-interface-api), such as `log()` or `warn()`.
-* _Read more about this in the [MDN Web Docs: console](https://developer.mozilla.org/en-US/docs/Web/API/console) reference page_.
+#### Boolean value
+* A value that is either `true` or `false`.
+* Boolean values are often the result of a comparison [operator](#operator-sql) and can be used to filter data based on whether a specified condition is `true` or `false`.
+#### Clause (SQL)
+* A part of a query built around a particular SQL keyword (e.g., `SELECT`, `WHERE`, `ORDER BY`).
+* Clauses are used to describe what data should be returned by a database. 
+#### Data
+* Pieces of information usually formatted in a specific way.
+* Data can have many forms, including numbers, pictures, words and audio.
+#### Database
+* A structured collection of data which can be queried.
+* [SQLite](#sqlite), the database technology used in this experience, is a kind of database known as a [relational database](#relational-database).
 #### Development environment
 * _See [integrated development environment (IDE)](#integrated-development-environment-ide)._
-#### `document` object
-* An object provided by the [document object model (DOM)](#document-object-model-dom) [API](#application-programming-interface-api) that is a data representation of the structure and content that is defined by the HTML code of a web page. 
-* The `document` object provides many useful methods, including ones for creating, removing, selecting and modifying HTML elements.  
-* _Read more about this on the [MDN Web Docs: Document](https://developer.mozilla.org/en-US/docs/Web/API/Document) reference page._
-#### Document object model (DOM)
-* One of many Web [API](#application-programming-interface-api)s provided by the web browser, the document object model (DOM) allows JavaScript to interact with the web page that has been loaded.
-* _Read more about this on the [MDN Web Docs: Introduction to the DOM](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction) reference page._
 #### Integrated development environment (IDE)
 * An application that is used to write code. It often has features that make writing code easier, such as language-specific syntax highlighting. It also often has tools to facilitate development-related tasks such as version control.
-#### Method (JS)
-* A function that is a [property](#property-js) of an [object](#object-js).
-#### Object (JS)
-* An object is a way to organize related information and functions together, using [properties](#property-js).
-#### Property (JS)
-* A property is data or a function that has been associated with an [object](#object-js).
-* Data properties can be accessed using dot notation, in the form of `objectName.propertyName` (_note the dot separating the object name and the desired property_).
-* A property that is a function is called a [method](#method-js).
-* Function properties are accessed the same way as data properties (dot notation) and are invoked like non-property functions, using `()`, e.g., `objectName.methodName()`.
-#### Selector (CSS)
-* A pattern that defines which HTML elements will be affected by a given set of CSS rules.
-* _See also: [Selector (JS)](#selector-js)_.
-#### Selector (JS)
-* A pattern that can be used with a query method to find and return (select) references to specific HTML elements on a web page.
-* JavaScript selector syntax follows the same rules as the selector syntax used by [CSS selectors](#selector-css). 
+#### Keyword (SQL)
+* A word that carries a specific meaning in the context of an SQL query.
+* Keywords are *reserved words*, which means that these specific words can only ever be used for a predetermined purpose, and cannot be freely used or reassigned.
+#### Operator (SQL)
+* Special symbols or [reserved words](#keyword-sql) that can be used to compare, calculate, and manipulate data.
+* Common **comparison operators** (usually found in a query's `WHERE` clause and which usually return a [boolean value](#boolean-value)) include: `=`, `>`, `=>`, `<`, `=<`, `NOT`, `AND`, `IN`, `BETWEEN`, `LIKE`.
+#### Query (SQL)
+* A question for a database, made up of one or more [clauses](#clause).
+#### SQL
+* Structured query lanaguage.
+* A computer language used to access and manipulate data contained in a database.
+#### SQL Online IDE
+* URL: [https://sqliteonline.com](https://sqliteonline.com)
+* A web-based [integrated development environment (IDE)](#integrated-development-environment-ide) built around an industry standard tool, Microsoft Visual Studio Code (VSCode).
+#### SQLite
+* A small, self-contained, SQL-based database management system.
 #### Syntax
-* The rules and structure of a language (including programming languages) that allow it to be understood. Code structure, symbols and keywords are all part of JavaScript's syntax.
-#### Web triad
-* A collection of three computer languages, [Cascading Style Sheets (CSS)](#cascading-style-sheets-css), [HyperText Markup Language (HTML)](#hypertext-markup-language-html), and [JavaScript (JS)](#javascript-js), that are found on most, if not all, web pages on the internet.
+* The rules and structure of a language (including programming languages) that allow it to be consistently understood and executed
 
 ### Modifications and Extensions
 #### Modifications
 * The exercises can also be run as a large group (a mix of `we` & `you`), if breakout rooms aren't an option.
 
 #### Extensions
-* If all the content is completed, the content for Part 2 is included as "stretch" content and can be started.
 
 _More coming soon!_
-
----
-[^syntax-1]: JavaScript Syntax 1: Basics of JavaScript syntax (keywords, symbols); dot notation to invoke an object's methods or access its properties, e.g. `objectName.someProperty`.  
-[^syntax-1-5]: JavaScript Syntax 1.5: Comments `//`, objects  
-[^syntax-2]: JavaScript Syntax 2: Arguments, text strings, variables  
-[^syntax-3]: JavaScript Syntax 3: Arrays and lists  
