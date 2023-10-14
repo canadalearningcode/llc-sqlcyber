@@ -16,6 +16,7 @@ Type | Language | Link
 --- | --- | ---
 Instructor notes 👈 _YOU ARE HERE_ | English | [GitHub Pages](https://canadalearningcode.github.io/llc-sqlcyber/)
 Slides | English | Google Slides: [Online or in-person](https://bit.ly/llc-sqlcyber)
+Slides | French | Google Slides: [En ligne ou en présentiel](https://go.learningcode.ca/sqlcybersecurite)
 Dataset | Multi | SQLite database file (clccyber.db): [https://bit.ly/llc-sqlcyber-db](https://bit.ly/llc-sqlcyber-db)
 
 ## Versioning
